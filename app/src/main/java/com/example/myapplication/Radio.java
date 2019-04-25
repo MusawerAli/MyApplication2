@@ -22,13 +22,13 @@ public class Radio extends AppCompatActivity {
                 RadioButton male =(RadioButton) findViewById(R.id.male);
                 RadioButton female =(RadioButton) findViewById(R.id.female);
                 if(male.isChecked()){
-                    Toast.makeText();
+                    Toast.makeText(Radio.this,"Ghazanfar Chohan",Toast.LENGTH_LONG).show();
                 }
-                else if{
-
+                else if(female.isChecked()){
+                    Toast.makeText(Radio.this,"Female",Toast.LENGTH_LONG).show();
                 }
                 else{
-
+                    Toast.makeText(Radio.this,"Ali Raza Chaudhary",Toast.LENGTH_LONG).show();
                 }
 
             }

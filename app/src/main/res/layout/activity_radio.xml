@@ -19,7 +19,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/male"
-                android:text="Male"
+                android:text="Ghazanfar Chohan"
+                android:drawableLeft="@drawable/gh"
                 />
         <RadioButton
             android:layout_width="match_parent"
@@ -33,7 +34,7 @@
             android:drawableLeft="@drawable/k2"
 
             android:id="@+id/k2"
-            android:text="kHusra"
+            android:text="Ali Raza Ch@uDhAry"
             />
     </RadioGroup>
     
