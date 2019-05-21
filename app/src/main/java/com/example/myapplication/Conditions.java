@@ -32,12 +32,12 @@ TextView tv;
             }else if(option.equals("ghazanfar"))
             {
                 tv.setText("Pa Ghazanfar Congrats you got 3.2 gp");
-            }else if(option.equals("gulfam")){
+            }else if(option.equals("Gulfam")){
                 tv.setText("Congrats you got 2.8 gp: Need For Improvements");
             }else if(option.equals("alaodeen")){
                 tv.setText("Congrats Allaodeen 3.5 gp ai");
             }else if(option.equals("farhan")){
-                tv.setText("Dig you got first timme 3.5 ");
+                tv.setText("Dig you got first time 3.5 gp ");
             }else{
                     tv.setText("Sorry Dear you are not able to this survay");
             }

@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Radio"></activity>
+        <activity android:name=".StringReverse"></activity>
+        <activity android:name=".CheckBox" />
+        <activity android:name=".Spinner" />
+        <activity android:name=".Practise" />
+        <activity android:name=".Radio" />
         <activity android:name=".array" />
         <activity android:name=".Splash" />
         <activity android:name=".Conditions" />

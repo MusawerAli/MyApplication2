@@ -77,4 +77,25 @@
         android:fontFamily="casual"
         android:text="Radio"
         android:textSize="16dp" />
+
+    <Button
+        android:id="@+id/practise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:background="#276"
+        android:fontFamily="casual"
+        android:text="Practise"
+        android:textSize="16dp" />
+    <Button
+        android:id="@+id/spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:background="#972"
+        android:fontFamily="casual"
+        android:text="Spinner"
+        android:textSize="16dp" />
+
+
 </LinearLayout>
