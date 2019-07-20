@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".StringReverse"></activity>
+        <activity android:name=".DataBaseImplementation"></activity>
+        <activity android:name=".StringReverse" />
         <activity android:name=".CheckBox" />
         <activity android:name=".Spinner" />
         <activity android:name=".Practise" />
