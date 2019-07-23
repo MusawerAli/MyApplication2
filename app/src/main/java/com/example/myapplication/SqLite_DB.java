@@ -1,10 +1,13 @@
 package com.example.myapplication;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 public class SqLite_DB extends SQLiteOpenHelper {
+
+    SQLiteDatabase db;
 
     //DB NAME
     private static final String DATABASE_NAME = "student_info";
@@ -25,8 +28,8 @@ public class SqLite_DB extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
-    String CREATE_STUDENT_TABLE="CREATE TABLE " +TABLE_STUDENT+ "("+KEY_ROWID+ "INTEGER PRIMARY KEY AUTOINCREMENT," +
-            KEY_FIRST_NAME + "TEXT," + KEY_LAST_NAME + "TEXT);";
+    String CREATE_STUDENT_TABLE="CREATE TABLE " +TABLE_STUDENT+ "(" +KEY_ROWID+ " INTEGER PRIMARY KEY AUTOINCREMENT," +
+            KEY_FIRST_NAME + " TEXT, " + KEY_LAST_NAME + " TEXT);";
         sqLiteDatabase.execSQL(CREATE_STUDENT_TABLE);
     }
 
@@ -34,5 +37,18 @@ public class SqLite_DB extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
     sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + TABLE_STUDENT );
     onCreate(sqLiteDatabase);
+    }
+
+    public long insertStudents(String firstName, String lastName) {
+
+            db = this.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+        cv.put(KEY_FIRST_NAME,firstName);
+        cv.put(KEY_LAST_NAME,lastName);
+        return db.insert(TABLE_STUDENT,null,cv);
+
+
+
+
     }
 }

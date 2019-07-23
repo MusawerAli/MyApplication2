@@ -6,96 +6,234 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
+    android:weightSum="12"
     android:orientation="vertical"
+    android:background="#5628"
+
     >
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:text="@string/app_name"
         android:fontFamily="sans-serif-black"
         android:textSize="40dp"
         android:id="@+id/msg"
         />
 
-    <Button
-        android:id="@+id/start_btn"
-        android:layout_width="265dp"
-        android:layout_height="wrap_content"
-        android:background="#432"
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="0dp"
+       android:layout_weight="1"
+       android:weightSum="4"
+       android:orientation="horizontal"
+       >
+       <Button
+           android:id="@+id/start_btn"
+           android:layout_width="0dp"
+           android:layout_height="match_parent"
+           android:layout_weight="2"
 
-        android:text="@string/start_btn" />
+           android:background="#432"
 
-    <Button
+           android:text="@string/start_btn" />
 
-        android:id="@+id/reset_btn"
-        android:layout_width="268dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+       <Button
 
-        android:background="#7572"
-        android:text="@string/reset_btn" />
+           android:id="@+id/reset_btn"
+           android:layout_width="0dp"
+           android:layout_height="match_parent"
+           android:layout_weight="1"
 
+
+           android:background="#7572"
+           android:text="@string/reset_btn" />
+
+   </LinearLayout>
+   <View
+       android:layout_width="match_parent"
+       android:layout_height="0dp"
+       android:layout_weight="0.5"></View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:weightSum="16"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="#983"
+            android:layout_weight="6"
+            android:text="Guess Game"
+
+            android:fontFamily="casual"
+            android:textSize="20dp"
+            android:id="@+id/guessgame"
+            />
+        <Button
+            android:id="@+id/arr"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+
+            android:background="#4332"
+            android:fontFamily="casual"
+            android:text="arr"
+            android:textSize="16dp" />
+
+        <Button
+            android:id="@+id/radio"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+
+            android:layout_weight="2"
+            android:background="#276"
+            android:fontFamily="casual"
+            android:text="Radio"
+            android:textSize="16dp" />
+
+        <Button
+            android:id="@+id/practise"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+
+            android:layout_weight="3"
+            android:background="#276"
+            android:fontFamily="casual"
+            android:text="Practise"
+            android:textSize="16dp" />
+
+        <Button
+            android:id="@+id/spinner"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+
+            android:background="#972"
+            android:fontFamily="casual"
+            android:text="Spinner"
+            android:textSize="16dp" />
+
+
+    </LinearLayout>
     <ImageView
-        android:layout_width="111dp"
-        android:layout_height="wrap_content"
-        android:maxHeight="30dp"
-        android:src="@drawable/tim"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+
+        android:src="@drawable/crud1"
 
         />
 
-    <Button
-        android:layout_width="265dp"
-        android:layout_height="wrap_content"
-        android:background="#983"
-        android:text="Guess Game"
-        android:layout_gravity="center"
-        android:fontFamily="casual"
-        android:textSize="20dp"
-        android:id="@+id/guessgame"
-        />
-
-    <Button
-        android:id="@+id/arr"
-        android:layout_width="50dp"
-        android:layout_height="wrap_content"
-
-        android:background="#4332"
-        android:fontFamily="casual"
-        android:text="arr"
-        android:textSize="16dp" />
 
 
-    <!--Radio Button-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:weightSum="6"
+        android:orientation="horizontal"
+        >
+        <Button
+            android:id="@+id/insert"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
 
-    <Button
-        android:id="@+id/radio"
-        android:layout_width="50dp"
-        android:layout_height="wrap_content"
+            android:background="@drawable/create"
 
-        android:background="#276"
-        android:fontFamily="casual"
-        android:text="Radio"
-        android:textSize="16dp" />
+            />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"></View>
 
-    <Button
-        android:id="@+id/practise"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        <Button
+            android:id="@+id/search"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
 
-        android:background="#276"
-        android:fontFamily="casual"
-        android:text="Practise"
-        android:textSize="16dp" />
-    <Button
-        android:id="@+id/spinner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+            android:background="@drawable/search"
 
-        android:background="#972"
-        android:fontFamily="casual"
-        android:text="Spinner"
-        android:textSize="16dp" />
+            />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"></View>
+        <Button
+            android:id="@+id/update"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+
+            android:background="@drawable/update"
+
+            />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"></View>
+        <Button
+
+            android:id="@+id/delete"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+
+
+            android:background="@drawable/delete"
+            />
+
+
+    </LinearLayout>
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"></View>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:weightSum="2"
+        android:orientation="horizontal"
+
+        >
+
+        <Button
+            android:id="@+id/login"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Login"
+            android:background="@drawable/colors"
+            />
+        <Button
+            android:id="@+id/register"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Register"
+            android:background="@drawable/color1"
+
+            />
+    </LinearLayout>
+
+
+
+
+
+
 
 
 </LinearLayout>

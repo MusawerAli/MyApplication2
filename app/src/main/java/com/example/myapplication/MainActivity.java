@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
     TextView tv;
     Button start_btn;
     Button reset_btn;
-    Button guess_btn, arr_btn,radio_btn,practise,spinner,chkbox;
+    Button guess_btn, arr_btn,radio_btn,practise,spinner,chkbox,insert,login;
     int counter = 0;
 
     @Override
@@ -30,7 +30,8 @@ public class MainActivity extends AppCompatActivity {
         arr_btn = (Button) findViewById(R.id.arr);
         radio_btn = (Button) findViewById(R.id.radio);
         practise = (Button) findViewById(R.id.practise);
-
+        insert = (Button) findViewById(R.id.insert);
+        login = (Button) findViewById(R.id.login);
 
         start_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -92,7 +93,21 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(id);
             }
         });
+        insert.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent id = new Intent(MainActivity.this, DataBaseImplementation.class);
+                startActivity(id);
+            }
+        });
 
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent id = new Intent(MainActivity.this, Login.class);
+                startActivity(id);
+            }
+        });
 
     }
 }
