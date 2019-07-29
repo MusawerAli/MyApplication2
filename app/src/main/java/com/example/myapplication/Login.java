@@ -35,9 +35,9 @@ public class Login extends AppCompatActivity {
             });
     }
     private void check(String userdata, String pwd){
-    if((userdata.equals("Admin")) &&(pwd.equals("1122"))){
+    if((userdata.equals("admin")) &&(pwd.equals("admin"))){
         Toast.makeText(Login.this,"Login Successfully",Toast.LENGTH_LONG).show();
-        Intent intent = new Intent(Login.this,DataBaseImplementation.class);
+        Intent intent = new Intent(Login.this,log2.class);
         startActivity(intent);
         }else{
         Toast.makeText(Login.this,"UserName or Password Incorrect",Toast.LENGTH_LONG).show();

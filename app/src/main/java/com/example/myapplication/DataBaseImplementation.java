@@ -24,12 +24,14 @@ public class DataBaseImplementation extends AppCompatActivity implements View.On
         editId = (EditText) findViewById(R.id.editId);
 
         btnInsert = (Button) findViewById(R.id.btnInsert);
+        btnInsert.setOnClickListener(this);
         btnView = (Button) findViewById(R.id.btnView);
         btnUpdate = (Button) findViewById(R.id.btnUpdate);
         btnDelete = (Button) findViewById(R.id.btnDelete);
-    db = new SqLite_DB(this);
+        db = new SqLite_DB(this);
 
     }
+
 
     @Override
     public void onClick(View view) {
