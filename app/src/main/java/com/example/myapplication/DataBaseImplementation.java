@@ -1,6 +1,7 @@
 package com.example.myapplication;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.method.DialerKeyListener;
@@ -26,6 +27,7 @@ public class DataBaseImplementation extends AppCompatActivity implements View.On
         btnInsert = (Button) findViewById(R.id.btnInsert);
         btnInsert.setOnClickListener(this);
         btnView = (Button) findViewById(R.id.btnView);
+        btnView.setOnClickListener(this);
         btnUpdate = (Button) findViewById(R.id.btnUpdate);
         btnDelete = (Button) findViewById(R.id.btnDelete);
         db = new SqLite_DB(this);
@@ -71,6 +73,8 @@ public class DataBaseImplementation extends AppCompatActivity implements View.On
 
         case R.id.btnView:
 
+            Intent it = new Intent(getApplicationContext(),SQLView.class);
+            startActivity(it);
 
         break;
     }
