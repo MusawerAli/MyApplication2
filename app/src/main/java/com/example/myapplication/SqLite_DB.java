@@ -67,6 +67,33 @@ public class SqLite_DB extends SQLiteOpenHelper {
 
             result = result + c.getString(iRow) + "" + c.getString(iFirstName) + ""+c.getString(iLastName)+"\n";
         }
+        db.close();
         return result;
+    }
+
+    public String getStudentLastName(long l) {
+        db = this.getReadableDatabase();
+        String[] columns = new String[]{KEY_ROWID,KEY_FIRST_NAME,KEY_LAST_NAME};
+
+        Cursor c = db.query(TABLE_STUDENT,columns,KEY_ROWID+"="+l,null,null,null,null);
+        if(c!=null){
+            c.moveToFirst();
+            String name = c.getString(2);
+            return name;
+        }
+        return null;
+    }
+
+    public String getStudentFirstName(long l) {
+        db = this.getReadableDatabase();
+        String[] columns = new String[]{KEY_ROWID,KEY_FIRST_NAME,KEY_LAST_NAME};
+
+        Cursor c = db.query(TABLE_STUDENT,columns,KEY_ROWID+"="+l,null,null,null,null);
+        if(c!=null){
+            c.moveToFirst();
+            String name = c.getString(1);
+            return name;
+        }
+        return null;
     }
 }

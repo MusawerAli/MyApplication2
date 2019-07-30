@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 public class DataBaseImplementation extends AppCompatActivity implements View.OnClickListener{
     EditText editFirstName,editLastName,editId;
-    Button  btnInsert,btnView,btnUpdate,btnDelete;
+    Button  btnInsert,btnView,btnUpdate,btnDelete,btnSearch;
 
     SqLite_DB db;
     @Override
@@ -26,9 +26,19 @@ public class DataBaseImplementation extends AppCompatActivity implements View.On
 
         btnInsert = (Button) findViewById(R.id.btnInsert);
         btnInsert.setOnClickListener(this);
+
+
+        btnSearch = (Button) findViewById(R.id.btnSearch);
+        btnSearch.setOnClickListener(this);
+
+
         btnView = (Button) findViewById(R.id.btnView);
         btnView.setOnClickListener(this);
+
         btnUpdate = (Button) findViewById(R.id.btnUpdate);
+        btnUpdate.setOnClickListener(this);
+
+
         btnDelete = (Button) findViewById(R.id.btnDelete);
         db = new SqLite_DB(this);
 
@@ -41,6 +51,8 @@ public class DataBaseImplementation extends AppCompatActivity implements View.On
         case R.id.btnInsert:
             boolean fine = true;
             try{
+
+
                 String firstName    = editFirstName.getText().toString();
                 String lastName     = editLastName.getText().toString();
                 db.insertStudents(firstName,lastName);
@@ -77,6 +89,43 @@ public class DataBaseImplementation extends AppCompatActivity implements View.On
             startActivity(it);
 
         break;
+
+        case R.id.btnSearch:
+            boolean fine1 = true;
+            try{
+
+
+                String id = editId.getText().toString();
+                long l = Long.parseLong(id);
+
+              String fname =   db.getStudentFirstName(l);
+               String lname =  db.getStudentLastName(l);
+               editFirstName.setText(fname);
+               editLastName.setText(lname);
+
+            }catch (Exception e){
+
+                fine1 = false;
+
+                String error = e.toString();
+                Dialog d = new Dialog(this);
+                d.setTitle("Sorry");
+                TextView tv= new TextView(this);
+                tv.setText(error);
+                d.setContentView(tv);
+                d.show();
+
+            }finally {
+                if(fine1){
+                    Dialog d = new Dialog(this);
+                    d.setTitle("Sorry");
+                    TextView tv= new TextView(this);
+                    tv.setText("Success");
+                    d.setContentView(tv);
+                    d.show();
+                }
+            }
+            break;
     }
     }
 }
