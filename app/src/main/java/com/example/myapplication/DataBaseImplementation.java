@@ -126,6 +126,45 @@ public class DataBaseImplementation extends AppCompatActivity implements View.On
                 }
             }
             break;
+
+            case R.id.btnUpdate:
+                boolean fine2 = true;
+                try{
+
+                    String firstName    = editFirstName.getText().toString();
+                    String lastName     = editLastName.getText().toString();
+                    String id = editId.getText().toString();
+                    long l = Long.parseLong(id);
+
+                    db.UpdateStudent(l,firstName,lastName);
+
+
+
+
+
+                }catch (Exception e){
+
+                    fine2 = false;
+
+                    String error = e.toString();
+                    Dialog d = new Dialog(this);
+                    d.setTitle("Sorry");
+                    TextView tv= new TextView(this);
+                    tv.setText(error);
+                    d.setContentView(tv);
+                    d.show();
+
+                }finally {
+                    if(fine2){
+                        Dialog d = new Dialog(this);
+                        d.setTitle("Sorry");
+                        TextView tv= new TextView(this);
+                        tv.setText("Success");
+                        d.setContentView(tv);
+                        d.show();
+                    }
+                }
+                break;
     }
     }
 }

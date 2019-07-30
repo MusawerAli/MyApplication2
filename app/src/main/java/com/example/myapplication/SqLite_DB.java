@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.widget.TableLayout;
 
 public class SqLite_DB extends SQLiteOpenHelper {
 
@@ -95,5 +96,14 @@ public class SqLite_DB extends SQLiteOpenHelper {
             return name;
         }
         return null;
+    }
+
+    public void UpdateStudent(long l, String firstName, String lastName) {
+    db = this.getWritableDatabase();
+    ContentValues cv = new ContentValues();
+    cv.put(KEY_FIRST_NAME,firstName);
+    cv.put(KEY_LAST_NAME,lastName);
+    db.update(TABLE_STUDENT,cv,KEY_ROWID+"="+l,null);
+    db.close();
     }
 }
