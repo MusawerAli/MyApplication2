@@ -6,53 +6,132 @@
     android:layout_height="match_parent"
     tools:context=".DataBaseImplementation"
     android:orientation="vertical"
+    android:weightSum="12"
+    android:background="@drawable/colors"
     >
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"></View>
+    <ImageView
+
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+
+        android:src="@drawable/deer"
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="CRUD OPERATIONS"
+        android:fontFamily="monospace"
+        android:textSize="40dp"
+        android:layout_weight="0.5"
+        android:id="@+id/msg"
+        />
 
     <EditText
         android:id="@+id/editFirstName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:fontFamily="monospace"
         android:hint="Enter First Name" />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Enter iD"
+        android:layout_weight="0.5"
+        android:fontFamily="monospace"
         android:id="@+id/editId"
         />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter First Name"
+        android:hint="Enter Last Name"
+        android:fontFamily="monospace"
+        android:layout_weight="0.5"
         android:id="@+id/editLastName"
         />
-    <Button
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnInsert"
-        android:text="Insert"
-        />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnView"
-        android:text="vIEW"
-        />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnSearch"
-        android:text="Search"
-        />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnUpdate"
-        android:text="Update"
-        />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnDelete"
-        android:text="Delete"
-        />
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:weightSum="7"
+        android:orientation="horizontal"
+        >
+        <Button
+
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/add_button"
+            android:id="@+id/btnInsert"
+            android:fontFamily="monospace"
+
+            />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"></View>
+        <Button
+
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/search"
+            android:id="@+id/btnSearch"
+            android:fontFamily="monospace"
+
+            />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"></View>
+        <Button
+
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/view"
+            android:id="@+id/btnView"
+            android:fontFamily="monospace"
+
+            />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"></View>
+        <Button
+
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/update"
+            android:id="@+id/btnUpdate"
+            android:fontFamily="monospace"
+
+            />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"></View>
+        <Button
+
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/trash"
+            android:id="@+id/btnDelete"
+            android:fontFamily="monospace"
+
+            />
+    </LinearLayout>
+
+
+
+
 </LinearLayout>
