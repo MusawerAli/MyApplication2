@@ -71,7 +71,7 @@ public class DataBaseImplementation extends AppCompatActivity implements View.On
         }finally {
                 if(fine){
                     Dialog d = new Dialog(this);
-                    d.setTitle("Sorry");
+                    d.setTitle("congrats");
                     TextView tv= new TextView(this);
                     tv.setText("Success");
                     d.setContentView(tv);
